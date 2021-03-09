@@ -145,6 +145,139 @@ eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
 eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
 eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
 `;
+            case "image3":
+            case "Münze1":return img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . f f f f f f f . . . . . 
+. . . f 5 5 5 5 5 5 5 f . . . . 
+. . f 5 5 5 5 5 5 5 5 5 f . . . 
+. f 5 5 5 5 5 4 5 5 5 5 5 f . . 
+. f 5 5 5 5 5 4 5 5 5 5 5 f . . 
+. f 5 5 5 5 5 4 5 5 5 5 5 f . . 
+. f 5 5 5 5 5 4 5 5 5 5 5 f . . 
+. f 5 5 5 5 5 4 5 5 5 5 5 f . . 
+. f 5 5 5 5 5 4 5 5 5 5 5 f . . 
+. f 5 5 5 5 5 4 5 5 5 5 5 f . . 
+. . f 5 5 5 5 5 5 5 5 5 f . . . 
+. . . f 5 5 5 5 5 5 5 f . . . . 
+. . . . f f f f f f f . . . . . 
+. . . . . . . . . . . . . . . . 
+`;
+            case "image6":
+            case "Münze2":return img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . f f f f f f f . . . . . 
+. . . f 5 5 f 5 5 5 5 f . . . . 
+. . f 5 5 f 5 5 5 5 5 5 f . . . 
+. f 5 5 f 5 5 5 5 5 4 5 5 f . . 
+. f 5 5 f 5 5 5 5 4 5 5 5 f . . 
+. f 5 5 f 5 5 5 5 4 5 5 5 f . . 
+. f 5 5 f 5 5 5 5 4 5 5 5 f . . 
+. f 5 5 f 5 5 5 5 4 5 5 5 f . . 
+. f 5 5 f 5 5 5 5 4 5 5 5 f . . 
+. f 5 5 f 5 5 5 5 5 4 5 5 f . . 
+. . f 5 5 f 5 5 5 5 5 5 f . . . 
+. . . f 5 5 f 5 5 5 5 f . . . . 
+. . . . f f f f f f f . . . . . 
+. . . . . . . . . . . . . . . . 
+`;
+            case "image4":
+            case "Münze3":return img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . f f f f . . . . . 
+. . . . . . f 5 5 f 5 f . . . . 
+. . . . . f 5 5 f 5 5 5 f . . . 
+. . . . f 5 5 f 5 5 5 5 5 f . . 
+. . . . f 5 5 f 5 5 4 5 5 f . . 
+. . . . f 5 5 f 5 5 4 5 5 f . . 
+. . . . f 5 5 f 5 5 4 5 5 f . . 
+. . . . f 5 5 f 5 5 4 5 5 f . . 
+. . . . f 5 5 f 5 5 4 5 5 f . . 
+. . . . f 5 5 f 5 5 5 5 5 f . . 
+. . . . . f 5 5 f 5 5 5 f . . . 
+. . . . . . f 5 5 f 5 f . . . . 
+. . . . . . . f f f f . . . . . 
+. . . . . . . . . . . . . . . . 
+`;
+            case "image5":
+            case "Münze4":return img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . f f f f . . . . . 
+. . . . . . . f 5 f 5 f . . . . 
+. . . . . . . f 5 f 5 5 f . . . 
+. . . . . . . f 5 f 5 5 5 f . . 
+. . . . . . . f 5 f 5 5 5 f . . 
+. . . . . . . f 5 f 5 5 5 f . . 
+. . . . . . . f 5 f 5 5 5 f . . 
+. . . . . . . f 5 f 5 5 5 f . . 
+. . . . . . . f 5 f 5 5 5 f . . 
+. . . . . . . f 5 f 5 5 5 f . . 
+. . . . . . . f 5 f 5 5 f . . . 
+. . . . . . . f 5 f 5 f . . . . 
+. . . . . . . f f f f . . . . . 
+. . . . . . . . . . . . . . . . 
+`;
+            case "image7":
+            case "Münze5":return img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . f f f f . . . . . . . . 
+. . . f 5 f 5 f . . . . . . . . 
+. . f 5 5 f 5 f . . . . . . . . 
+. f 5 5 5 f 5 f . . . . . . . . 
+. f 5 5 5 f 5 f . . . . . . . . 
+. f 5 5 5 f 5 f . . . . . . . . 
+. f 5 5 5 f 5 f . . . . . . . . 
+. f 5 5 5 f 5 f . . . . . . . . 
+. f 5 5 5 f 5 f . . . . . . . . 
+. f 5 5 5 f 5 f . . . . . . . . 
+. . f 5 5 f 5 f . . . . . . . . 
+. . . f 5 f 5 f . . . . . . . . 
+. . . . f f f f . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+`;
+            case "image8":
+            case "Münze6":return img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . f f f f . . . . . . . . 
+. . . f 5 f 5 5 f . . . . . . . 
+. . f 5 5 5 f 5 5 f . . . . . . 
+. f 5 5 5 5 5 f 5 5 f . . . . . 
+. f 5 5 4 5 5 f 5 5 f . . . . . 
+. f 5 5 4 5 5 f 5 5 f . . . . . 
+. f 5 5 4 5 5 f 5 5 f . . . . . 
+. f 5 5 4 5 5 f 5 5 f . . . . . 
+. f 5 5 4 5 5 f 5 5 f . . . . . 
+. f 5 5 5 5 5 f 5 5 f . . . . . 
+. . f 5 5 5 f 5 5 f . . . . . . 
+. . . f 5 f 5 5 f . . . . . . . 
+. . . . f f f f . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+`;
+            case "image9":
+            case "Münze7":return img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . f f f f f f f . . . . . 
+. . . f 5 5 5 5 f 5 5 f . . . . 
+. . f 5 5 5 5 5 5 f 5 5 f . . . 
+. f 5 5 4 5 5 5 5 5 f 5 5 f . . 
+. f 5 5 5 4 5 5 5 5 f 5 5 f . . 
+. f 5 5 5 4 5 5 5 5 f 5 5 f . . 
+. f 5 5 5 4 5 5 5 5 f 5 5 f . . 
+. f 5 5 5 4 5 5 5 5 f 5 5 f . . 
+. f 5 5 5 4 5 5 5 5 f 5 5 f . . 
+. f 5 5 4 5 5 5 5 5 f 5 5 f . . 
+. . f 5 5 5 5 5 5 f 5 5 f . . . 
+. . . f 5 5 5 5 f 5 5 f . . . . 
+. . . . f f f f f f f . . . . . 
+. . . . . . . . . . . . . . . . 
+`;
         }
         return null;
     })
