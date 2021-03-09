@@ -24,11 +24,9 @@ controller.up.onEvent(ControllerButtonEvent.Pressed, function () {
     springen()
 })
 function LevelVeraendern (level: Sprite) {
-    tiles.setTilemap(tilemap`Level0`)
-    tiles.setTilemap(tilemap`Level5`)
-    tiles.setTilemap(tilemap`Level7`)
-    tiles.setTilemap(tilemap`Level9`)
-    tiles.setTilemap(tilemap`Level11`)
+    if (level == 0) {
+        tiles.setTilemap(tilemap`Level1`)
+    }
 }
 controller.down.onEvent(ControllerButtonEvent.Pressed, function () {
     if (!(Mario.isHittingTile(CollisionDirection.Bottom))) {
