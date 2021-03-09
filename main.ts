@@ -23,6 +23,11 @@ controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
 controller.up.onEvent(ControllerButtonEvent.Pressed, function () {
     springen()
 })
+function LevelVeraendern (level: Sprite) {
+    if (level == 0) {
+        tiles.setTilemap(tilemap`Level1`)
+    }
+}
 controller.down.onEvent(ControllerButtonEvent.Pressed, function () {
     if (!(Mario.isHittingTile(CollisionDirection.Bottom))) {
         Mario.vy += 80
@@ -32,7 +37,24 @@ controller.down.onEvent(ControllerButtonEvent.Pressed, function () {
 function AnimationFeinde () {
     Feinde = animation.createAnimation(ActionKind.Walking, 100)
     Feinde.addAnimationFrame(assets.image`Feind1`)
-    Feinde.addAnimationFrame(assets.image`Feind2`)
+    Feinde.addAnimationFrame(img`
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        . . . . . . . . . . . . . . . . 
+        `)
 }
 function AnimationMuenzen () {
     Münze = animation.createAnimation(ActionKind.Idle, 200)
@@ -47,8 +69,8 @@ function AnimationMuenzen () {
 function erstelleSpieler (Spieler: Sprite) {
     Spieler.ay = Schwerkraft
     scene.cameraFollowSprite(Spieler)
-    controller.moveSprite(Spieler, 10, 10)
     Spieler.z = 5
+    controller.moveSprite(Spieler, 50, 50)
     info.setLife(3)
     info.setScore(0)
 }
@@ -56,6 +78,7 @@ function Animationen () {
     AnimationMuenzen()
     AnimationFeinde()
 }
+let mySprite = false
 let Münze: animation.Animation = null
 let Feinde: animation.Animation = null
 let doppelSpringenSpeed = 0
@@ -64,10 +87,39 @@ let PixelalsMeter = 0
 let Schwerkraft = 0
 let Mario: Sprite = null
 Mario = sprites.create(assets.image`SuperMario`, SpriteKind.Player)
-let Periode = 600
-Schwerkraft = 9.81 * PixelalsMeter
 scene.setBackgroundImage(assets.image`Hintergrund1`)
-Animationen()
-erstelleSpieler(Mario)
+controller.moveSprite(Mario)
+Schwerkraft = 9.81 * PixelalsMeter
+let Periode = 600
 let LevelAnzahl = 5
 let aktuellesLevel = 0
+Animationen()
+game.onUpdate(function () {
+    if (Mario.vx < 0) {
+        mySprite = true
+    } else if (Mario.vx > 0) {
+        mySprite = true
+    }
+    if (Mario.vx < 0) {
+        mySprite = true
+    } else if (Mario.isHittingTile(CollisionDirection.Top)) {
+        Mario.vy = 0
+    }
+    if (controller.down.isPressed()) {
+        if (true) {
+            animation.setAction(Mario, ActionKind.Walking)
+        }
+    } else if (Mario.vy < 20 && !(Mario.isHittingTile(CollisionDirection.Bottom))) {
+        if (true) {
+            animation.setAction(Mario, ActionKind.Walking)
+        }
+    } else if (Mario.vx < 0) {
+        animation.setAction(Mario, ActionKind.Walking)
+    } else if (Mario.vx > 0) {
+        animation.setAction(Mario, ActionKind.Walking)
+    } else {
+        if (true) {
+            animation.setAction(Mario, ActionKind.Walking)
+        }
+    }
+})
