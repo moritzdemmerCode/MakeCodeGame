@@ -1,25 +1,5 @@
-let mySprite: Sprite = null
-controller.moveSprite(mySprite)
-scene.setBackgroundColor(0)
-mySprite = sprites.create(img`
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    `, SpriteKind.Player)
-for (let index = 0; index < 4; index++) {
-    mySprite += 1
-}
-controller.moveSprite(mySprite)
+let PixelalsMeter = 0
+let Mario = sprites.create(assets.image`SuperMario`, SpriteKind.Player)
+let Periode = 600
+let Schwerkraft = 9.81 * PixelalsMeter
+scene.setBackgroundImage(assets.image`Hintergrund1`)
