@@ -13,7 +13,7 @@ controller.anyButton.onEvent(ControllerButtonEvent.Pressed, function () {
     music.knock.play()
     sprite.vy = -100
     animation.setAction(sprite, ActionKind.Jumping)
-    sprite.startEffect(effects.rings, 300)
+    sprite.startEffect(effects.blizzard, 500)
 })
 let projectile: Sprite = null
 let gapSprite: Sprite = null
@@ -538,6 +538,6 @@ game.onUpdateInterval(1500, function () {
     projectile.bottom = scene.screenHeight()
 })
 forever(function () {
-    music.playMelody("C5 - B - G A B G ", 120 + game.runtime() / 1000)
-    music.playMelody("C5 - B - A B G - ", 120 + game.runtime() / 1000)
+    music.playMelody("C5 - B - G A B G ", 120 + game.runtime() / 500)
+    music.playMelody("C5 - B - A B G - ", 120 + game.runtime() / 500)
 })
