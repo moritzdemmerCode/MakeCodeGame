@@ -6,18 +6,14 @@ enum ActionKind {
 namespace SpriteKind {
     export const Gap = SpriteKind.create()
 }
-sprites.onOverlap(SpriteKind.Player, SpriteKind.Gap, function (sprite, otherSprite) {
-    if (otherSprite.right - sprite.left < 2) {
-        info.changeScoreBy(1)
-    }
-})
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Projectile, function (sprite, otherSprite) {
-    game.over(false)
+    game.over(false, color.RotatePalette)
 })
 controller.anyButton.onEvent(ControllerButtonEvent.Pressed, function () {
-    mySprite.vy = -100
-    animation.setAction(mySprite, ActionKind.Jumping)
-    mySprite.startEffect(effects.rings, 300)
+    music.knock.play()
+    sprite.vy = -100
+    animation.setAction(sprite, ActionKind.Jumping)
+    sprite.startEffect(effects.rings, 300)
 })
 let projectile: Sprite = null
 let gapSprite: Sprite = null
@@ -25,11 +21,11 @@ let gapImage: Image = null
 let bottomImage: Image = null
 let topImage: Image = null
 let gap = 0
-let mySprite: Sprite = null
+let sprite: Sprite = null
 scene.setBackgroundColor(9)
-info.setScore(0)
-effects.confetti.startScreenEffect()
-mySprite = sprites.create(img`
+info.setScore(-1)
+effects.starField.startScreenEffect()
+sprite = sprites.create(img`
     . . . . . . . . . . b 5 b . . . 
     . . . . . . . . . b 5 b . . . . 
     . . . . . . . . . b c . . . . . 
@@ -47,7 +43,8 @@ mySprite = sprites.create(img`
     . . c b d d d d d 5 5 5 b b . . 
     . . . c c c c c c c c b b . . . 
     `, SpriteKind.Player)
-mySprite.ay = 300
+sprite.setPosition(100, 55)
+sprite.ay = 300
 let anim = animation.createAnimation(ActionKind.Jumping, 25)
 anim.addAnimationFrame(img`
     . . . . . . . . . . . . . . . . 
@@ -157,16 +154,20 @@ anim.addAnimationFrame(img`
     . . . c c c c c c c c b b . . . 
     . . . . . . . . . . . . . . . . 
     `)
-animation.attachAnimation(mySprite, anim)
+animation.attachAnimation(sprite, anim)
 game.onUpdate(function () {
-    if (mySprite.vy > 0) {
-        animation.setAction(mySprite, ActionKind.Idle)
+    if (sprite.vy > 0) {
+        animation.setAction(sprite, ActionKind.Idle)
     }
-    if (mySprite.bottom > 120 || mySprite.top < 0) {
-        game.over(false)
+    if (sprite.bottom > 120 || sprite.top < 0) {
+        game.over(false, color.RotatePalette)
     }
 })
 game.onUpdateInterval(1500, function () {
+    info.changeScoreBy(1)
+    if (info.score() != 0) {
+        music.baDing.play()
+    }
     gap = randint(0, 3)
     if (gap == 0) {
         topImage = img`
@@ -525,12 +526,11 @@ game.onUpdateInterval(1500, function () {
             ......ee6eeeeee6eef.....
             `
     }
-    gapImage = image.create(2, 0)
-    gapImage.fill(1)
+    gapImage = image.create(20, 0)
     gapSprite = sprites.create(gapImage, SpriteKind.Gap)
     gapSprite.setFlag(SpriteFlag.AutoDestroy, true)
     gapSprite.setFlag(SpriteFlag.Invisible, true)
-    gapSprite.left = scene.screenWidth()
+    gapSprite.right = scene.screenWidth()
     gapSprite.vx = -45
     projectile = sprites.createProjectileFromSide(topImage, -45, 0)
     projectile.top = 0
