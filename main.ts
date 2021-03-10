@@ -24,7 +24,6 @@ controller.up.onEvent(ControllerButtonEvent.Pressed, function () {
     springen()
 })
 function LevelVeraendern (level: Sprite) {
-    tiles.setTilemap(tilemap`Level0`)
     tiles.setTilemap(tilemap`Level5`)
     tiles.setTilemap(tilemap`Level7`)
     tiles.setTilemap(tilemap`Level9`)
@@ -96,6 +95,8 @@ let Periode = 600
 let LevelAnzahl = 5
 let aktuellesLevel = 0
 Animationen()
+tiles.setTilemap(tilemap`Level0`)
+erstelleSpieler(Mario)
 game.onUpdate(function () {
     if (Mario.vx < 0) {
         mySprite = true
