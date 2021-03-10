@@ -537,3 +537,7 @@ game.onUpdateInterval(1500, function () {
     projectile = sprites.createProjectileFromSide(bottomImage, -45, 0)
     projectile.bottom = scene.screenHeight()
 })
+forever(function () {
+    music.playMelody("C5 - B - G A B G ", 120 + game.runtime() / 1000)
+    music.playMelody("C5 - B - A B G - ", 120 + game.runtime() / 1000)
+})
