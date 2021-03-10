@@ -1,26 +1,24 @@
 {
-    "name": "bla",
-    "description": "",
+    "name": "makecodegame",
     "dependencies": {
         "device": "*"
     },
     "files": [
-        "main.blocks",
-        "main.ts",
+        ".vscode/settings.json",
+        ".vscode/tasks.json",
         "README.md",
         "assets.json",
         "images.g.jres",
         "images.g.ts",
+        "main.blocks",
+        "main.ts",
+        "test.ts",
         "tilemap.g.jres",
         "tilemap.g.ts",
-        "main.py",
-        null
-    ],
-    "testFiles": [
-        "test.ts"
+        "tsconfig.json"
     ],
     "targetVersions": {
-        "target": "1.3.44",
+        "target": "1.3.49",
         "targetId": "arcade"
     },
     "supportedTargets": [
