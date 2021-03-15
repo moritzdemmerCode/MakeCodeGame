@@ -16,8 +16,6 @@ controller.anyButton.onEvent(ControllerButtonEvent.Pressed, function () {
     sprite.startEffect(effects.blizzard, 500)
 })
 let projectile: Sprite = null
-let gapSprite: Sprite = null
-let gapImage: Image = null
 let bottomImage: Image = null
 let topImage: Image = null
 let gap = 0
@@ -176,7 +174,7 @@ game.onUpdateInterval(1500, function () {
             ...6776666eeee6766776...
             ..6776ee77777777667776..
             ...668ce7768867788666...
-            ......ce77eeee67ee......
+            ......ce77eeee67ee...3..
             ......eeeeeeeeeeee......
             ......eeeeeeeeeeee......
             ......eeeeeeeeeeee......
@@ -526,12 +524,6 @@ game.onUpdateInterval(1500, function () {
             ......ee6eeeeee6eef.....
             `
     }
-    gapImage = image.create(20, 0)
-    gapSprite = sprites.create(gapImage, SpriteKind.Gap)
-    gapSprite.setFlag(SpriteFlag.AutoDestroy, true)
-    gapSprite.setFlag(SpriteFlag.Invisible, true)
-    gapSprite.right = scene.screenWidth()
-    gapSprite.vx = -45
     projectile = sprites.createProjectileFromSide(topImage, -45, 0)
     projectile.top = 0
     projectile = sprites.createProjectileFromSide(bottomImage, -45, 0)
