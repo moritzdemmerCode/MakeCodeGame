@@ -43,9 +43,6 @@ let yellowRect: Image = null
 let showBlue: Sprite = null
 let blueRect: Image = null
 let sprite: Sprite = null
-if (true) {
-	
-}
 createMenu()
 scene.setBackgroundColor(9)
 info.setScore(-1)
