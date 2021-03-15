@@ -28,6 +28,24 @@
         "tilemapTile": true,
         "displayName": "Münze"
     },
+    "tile5": {
+        "data": "hwQQABAAAAB3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3f3/////393d/d393d3f3d393f3d3d/d3f3d/d3d393d/d393d3f3d393d3d3d/d3f3d3d3d393d/d3d3d3f3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3d3dw==",
+        "mimeType": "image/x-mkcd-f4",
+        "tilemapTile": true,
+        "displayName": "Easy"
+    },
+    "tile6": {
+        "data": "hwQQABAAAABVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV9f//////VVX1//////9VVfX/VVVVVVVVVf9fVVVVVVVV9f9VVVVVVVVV/1VVVVVVVfX/VVVVVVVV/19VVVVVVfX/VVVVVVVV9f//////VVX1//////9VVVVVVVVVVVVVVVVVVVVVVQ==",
+        "mimeType": "image/x-mkcd-f4",
+        "tilemapTile": true,
+        "displayName": "Medium"
+    },
+    "tile7": {
+        "data": "hwQQABAAAAAiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIi8iIiIiIvIiLy/////y8iIvIiIiIiLyIi8iIiIiIvIiLyIiIiIi8iIvIiIiIiLyIi8iIiIiIvIiIiLyIi8iIiIiLy//8vIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIg==",
+        "mimeType": "image/x-mkcd-f4",
+        "tilemapTile": true,
+        "displayName": "Difficult"
+    },
     "Level3": {
         "id": "Level3",
         "mimeType": "application/mkcd-tilemap",
