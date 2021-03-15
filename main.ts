@@ -9,6 +9,23 @@ namespace SpriteKind {
 sprites.onOverlap(SpriteKind.Player, SpriteKind.Projectile, function (sprite, otherSprite) {
     game.over(false, color.RotatePalette)
 })
+function createMenu () {
+    blueRect = image.create(scene.screenWidth(), scene.screenHeight() / 3)
+    blueRect.fill(6)
+    blueRect.drawRect(0, 0, scene.screenWidth(), scene.screenHeight() / 3, 6)
+    showBlue = sprites.create(blueRect, 0)
+    showBlue.setPosition(scene.screenWidth() / 2, 20)
+    yellowRect = image.create(scene.screenWidth(), scene.screenHeight() / 3)
+    yellowRect.fill(5)
+    yellowRect.drawRect(0, 0, scene.screenWidth(), scene.screenHeight() / 3, 5)
+    showYellow = sprites.create(yellowRect, 0)
+    showYellow.setPosition(scene.screenWidth() / 2, 60)
+    redRect = image.create(scene.screenWidth(), scene.screenHeight() / 3)
+    redRect.fill(2)
+    redRect.drawRect(0, 0, scene.screenWidth(), scene.screenHeight() / 3, 2)
+    showRed = sprites.create(redRect, 0)
+    showRed.setPosition(scene.screenWidth() / 2, 100)
+}
 controller.anyButton.onEvent(ControllerButtonEvent.Pressed, function () {
     music.knock.play()
     sprite.vy = -100
@@ -19,7 +36,17 @@ let projectile: Sprite = null
 let bottomImage: Image = null
 let topImage: Image = null
 let gap = 0
+let showRed: Sprite = null
+let redRect: Image = null
+let showYellow: Sprite = null
+let yellowRect: Image = null
+let showBlue: Sprite = null
+let blueRect: Image = null
 let sprite: Sprite = null
+if (true) {
+	
+}
+createMenu()
 scene.setBackgroundColor(9)
 info.setScore(-1)
 effects.starField.startScreenEffect()
