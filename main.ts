@@ -22,7 +22,7 @@ let gap = 0
 let sprite: Sprite = null
 scene.setBackgroundColor(9)
 info.setScore(-1)
-effects.clouds.startScreenEffect()
+effects.starField.startScreenEffect()
 sprite = sprites.create(img`
     . . . . . . . . . . b 5 b . . . 
     . . . . . . . . . b 5 b . . . . 
@@ -41,8 +41,8 @@ sprite = sprites.create(img`
     . . c b d d d d d 5 5 5 b b . . 
     . . . c c c c c c c c b b . . . 
     `, SpriteKind.Player)
-sprite.ay = 300
 sprite.setPosition(100, 55)
+sprite.ay = 300
 let anim = animation.createAnimation(ActionKind.Jumping, 25)
 anim.addAnimationFrame(img`
     . . . . . . . . . . . . . . . . 
