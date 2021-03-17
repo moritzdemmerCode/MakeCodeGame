@@ -28,6 +28,18 @@
         "tilemapTile": true,
         "displayName": "Münze"
     },
+    "tile6": {
+        "data": "hwQQABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4",
+        "tilemapTile": true,
+        "displayName": "myTile0"
+    },
+    "tile5": {
+        "data": "hwQQABAAAAAiIiIi8P/w/yIiIiKCCIAIIiIiIoIIgAgiIiIiggiACCIiIiKCCIAIICIiIoKIiAgAIiIiIoiICAAgIiIiiIgIAAAiIiKIiAgAACAiIoKICAAAACIigogIAAAALiIiiAgAAODu7iKICAAA4N7d3YAIAADg3t3TgAgAAODe1tPQDQ==",
+        "mimeType": "image/x-mkcd-f4",
+        "tilemapTile": true,
+        "displayName": "Spielfigur"
+    },
     "Level3": {
         "id": "Level3",
         "mimeType": "application/mkcd-tilemap",
