@@ -11,18 +11,18 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Projectile, function (sprite, ot
 })
 function createMenu () {
     blueRect = image.create(scene.screenWidth(), scene.screenHeight() / 3)
-    blueRect.fill(15)
-    blueRect.drawRect(0, 0, scene.screenWidth(), scene.screenHeight() / 3, 15)
+    blueRect.fill(7)
+    blueRect.drawRect(0, 0, scene.screenWidth(), scene.screenHeight() / 3, 7)
     showBlue = sprites.create(blueRect, 0)
     showBlue.setPosition(scene.screenWidth() / 2, 20)
     yellowRect = image.create(scene.screenWidth(), scene.screenHeight() / 3)
-    yellowRect.fill(2)
-    yellowRect.drawRect(0, 0, scene.screenWidth(), scene.screenHeight() / 3, 2)
+    yellowRect.fill(1)
+    yellowRect.drawRect(0, 0, scene.screenWidth(), scene.screenHeight() / 3, 1)
     showYellow = sprites.create(yellowRect, 0)
     showYellow.setPosition(scene.screenWidth() / 2, 60)
     redRect = image.create(scene.screenWidth(), scene.screenHeight() / 3)
-    redRect.fill(5)
-    redRect.drawRect(0, 0, scene.screenWidth(), scene.screenHeight() / 3, 5)
+    redRect.fill(15)
+    redRect.drawRect(0, 0, scene.screenWidth(), scene.screenHeight() / 3, 15)
     showRed = sprites.create(redRect, 0)
     showRed.setPosition(scene.screenWidth() / 2, 100)
 }
@@ -43,6 +43,7 @@ let yellowRect: Image = null
 let showBlue: Sprite = null
 let blueRect: Image = null
 let sprite: Sprite = null
+createMenu()
 scene.setBackgroundColor(9)
 info.setScore(-1)
 effects.starField.startScreenEffect()
